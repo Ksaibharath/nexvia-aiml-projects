@@ -1,0 +1,10 @@
+name: "ranker_wd"
+platform: "tensorflow_savedmodel"
+max_batch_size: 512
+input [
+  { name: "user_idx" data_type: TYPE_INT32 dims: [ 1 ] },
+  { name: "item_idx" data_type: TYPE_INT32 dims: [ 1 ] },
+  { name: "dense"    data_type: TYPE_FP32  dims: [ 50 ] }
+]
+output [ { name: "score" data_type: TYPE_FP32 dims: [ 1 ] } ]
+dynamic_batching { max_queue_delay_microseconds: 2000 }

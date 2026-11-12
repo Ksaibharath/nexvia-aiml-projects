@@ -1,0 +1,11 @@
+name: "user_tower"
+platform: "tensorflow_savedmodel"
+max_batch_size: 256
+input [
+  { name: "user_idx" data_type: TYPE_INT32 dims: [ 1 ] },
+  { name: "history"  data_type: TYPE_INT32 dims: [ 20 ] }
+]
+output [
+  { name: "embedding" data_type: TYPE_FP32 dims: [ 64 ] }
+]
+dynamic_batching { max_queue_delay_microseconds: 2000 }

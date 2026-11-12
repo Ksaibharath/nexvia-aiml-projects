@@ -1,0 +1,13 @@
+{
+  "name": "recsys-two-stage",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Large-Scale Two-Stage Personalized Recommendation Engine (MovieLens 25M, Two-Tower, FAISS, DCN-V2, Redis, Triton, Airflow, Vercel & Netlify)",
+  "scripts": {
+    "start": "node scripts/dev_server.mjs",
+    "dev": "node scripts/dev_server.mjs",
+    "build": "echo 'Static assets and deploy_bundle ready in public/ and deploy_bundle/'",
+    "test:serverless": "node -e \"import('./lib/recsysEngine.mjs').then(m => console.log(JSON.stringify(m.routeApiRequest('/recommend', {user_id: '5', k: '3'}), null, 2)))\""
+  }
+}

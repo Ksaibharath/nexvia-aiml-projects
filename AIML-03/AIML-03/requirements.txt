@@ -1,0 +1,6 @@
+# Cloud deployments (Netlify / Vercel) execute pure Node 20 serverless inference from deploy_bundle/bundle.json
+# and require zero Python packages during cloud build initialization.
+#
+# Local Python options:
+#   Instant FastAPI + Streamlit quickstart:  pip install -r requirements-quickstart.txt
+#   Full TensorFlow + Spark + FAISS pipeline: pip install -r requirements-ml.txt

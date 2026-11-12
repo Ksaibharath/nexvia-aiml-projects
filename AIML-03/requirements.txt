@@ -1,0 +1,2 @@
+# Cloud serverless deploy uses Node 20 and deploy_bundle/bundle.json (no pip packages needed).
+# Local quickstart: pip install -r requirements-quickstart.txt

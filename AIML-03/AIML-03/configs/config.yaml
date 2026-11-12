@@ -1,0 +1,8 @@
+sample_users: 5000        # set to null for the full 25M dataset
+history_len: 20
+embedding_dim: 64
+retrieval_k: 300
+final_k: 10
+redis_ttl_seconds: 3600
+min_history_for_warm: 5
+model_version: 1
