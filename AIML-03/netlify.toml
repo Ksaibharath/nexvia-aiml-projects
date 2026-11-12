@@ -1,4 +1,4 @@
-﻿[build]
+[build]
   command = 'echo AIML-03-ready'
   publish = 'public'
   functions = 'netlify/functions'

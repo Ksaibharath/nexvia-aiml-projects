@@ -1,4 +1,4 @@
-﻿import { routeApiRequest } from '../../lib/recsysEngine.mjs';
+import { routeApiRequest } from '../../lib/recsysEngine.mjs';
 export async function handler(event) {
   try {
     let rawPath = event.path || '/';

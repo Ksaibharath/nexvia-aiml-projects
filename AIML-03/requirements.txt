@@ -1,1 +1,1 @@
-﻿# Cloud serverless deploy uses Node 20 (no pip install needed on Netlify).
+# Cloud serverless deploy uses Node 20 (no pip install needed on Netlify).
