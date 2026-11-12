@@ -1,0 +1,4 @@
+sample_pct: 20
+review_cost: 5.0
+gnn_hidden: 64
+kafka_bootstrap: localhost:9092

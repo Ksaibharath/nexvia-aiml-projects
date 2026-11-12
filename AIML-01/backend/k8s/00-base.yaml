@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Namespace
+metadata: {name: fraud}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: fraud-config, namespace: fraud}
+data:
+  MLFLOW_TRACKING_URI: "http://mlflow:5000"
+  KAFKA_BOOTSTRAP: "kafka:9092"
+  FEAST_REPO: "feature_repo_k8s"
+  DRIFT_SHARE: "0.30"
+---
+apiVersion: v1
+kind: Secret
+metadata: {name: fraud-secrets, namespace: fraud}
+type: Opaque
+stringData:
+  db_url: "postgresql+psycopg2://fraud:fraud@postgres:5432/fraud"

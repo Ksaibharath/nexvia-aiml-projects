@@ -1,0 +1,12 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements-serving.txt .
+RUN pip install --no-cache-dir -r requirements-serving.txt
+COPY fraud ./fraud
+COPY feature_repo ./feature_repo
+COPY feature_repo_k8s ./feature_repo_k8s
+COPY configs ./configs
+COPY data/processed/labels.parquet ./data/processed/labels.parquet
+ENV FEAST_REPO=feature_repo_k8s PYTHONPATH=/app
+EXPOSE 8080
+CMD ["uvicorn", "fraud.serving.api:app", "--host", "0.0.0.0", "--port", "8080"]

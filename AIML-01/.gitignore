@@ -1,0 +1,21 @@
+node_modules/
+.next/
+out/
+.env*.local
+.vercel
+.netlify
+# Python
+__pycache__/
+*.pyc
+.venv/
+# Data & artifacts (never commit Kaggle CSVs)
+data/
+artifacts/
+mlruns/
+mlartifacts/
+backend/data/
+backend/artifacts/
+backend/feature_repo/data/*.parquet
+backend/feature_repo/data/*.db
+*.log
+.DS_Store

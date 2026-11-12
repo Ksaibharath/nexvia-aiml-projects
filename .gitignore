@@ -1,0 +1,16 @@
+**/.venv/
+**/venv/
+**/node_modules/
+**/__pycache__/
+**/.pytest_cache/
+**/.next/
+**/out/
+**/dist/
+**/build/
+**/*.pyc
+**/*.zip
+.keras/
+**/uploads/
+AIML-03/data/
+AIML-03/artifacts/
+AIML-03/triton/model_repository/*/*/
