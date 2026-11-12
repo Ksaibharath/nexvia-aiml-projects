@@ -1,23 +1,19 @@
-[build]
-  command = "echo 'AIML-03 build complete'"
-  publish = "public"
-  functions = "netlify/functions"
-
+﻿[build]
+  command = 'echo AIML-03-ready'
+  publish = 'public'
+  functions = 'netlify/functions'
 [functions]
-  node_bundler = "esbuild"
-  included_files = ["deploy_bundle/**"]
-
+  node_bundler = 'esbuild'
+  included_files = ['deploy_bundle/**']
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/api/api/:splat"
+  from = '/api/*'
+  to = '/.netlify/functions/api/api/:splat'
   status = 200
-
 [[redirects]]
-  from = "/recommend"
-  to = "/.netlify/functions/api/recommend"
+  from = '/recommend'
+  to = '/.netlify/functions/api/recommend'
   status = 200
-
 [[redirects]]
-  from = "/health"
-  to = "/.netlify/functions/api/health"
+  from = '/health'
+  to = '/.netlify/functions/api/health'
   status = 200
